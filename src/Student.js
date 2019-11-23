@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import {
     Card, CardText, CardBody,
     CardTitle, CardSubtitle
@@ -62,12 +63,12 @@ export default class Student extends React.Component {
                              <Card className="col-md-4">
                        
                                <CardBody>
-                                 <CardTitle>{this.state.students[key].name}</CardTitle>
+                                <Link to={`/student/:${this.state.students[key].rollNo}`}><CardTitle>{this.state.students[key].name}</CardTitle> </Link> 
                                  <CardSubtitle>{this.state.students[key].marks.s1+this.state.students[key].marks.s2+this.state.students[key].marks.s3}</CardSubtitle>
                                  <CardText>{this.state.students[key].rollNo}</CardText>
                                 
                                              
-                              </CardBody>
+                              </CardBody> 
                               </Card>
                              
                               
