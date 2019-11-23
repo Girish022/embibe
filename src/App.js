@@ -11,7 +11,7 @@ class App extends React.Component {
   return (
     <BrowserRouter>
     <div>
-      <h2> Hello React</h2>
+   
       <Link to='/student'> Student</Link>
       <Switch>
       <Route path='/student' component={Student}></Route>
